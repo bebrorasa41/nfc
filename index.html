@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автозвук</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = new Audio("sound.mp3"); // Замените на свою аудиофайл
+            audio.loop = true;
+            audio.play().catch(error => console.log("Автозапуск заблокирован браузером: " + error));
+            
+            document.body.addEventListener("click", () => {
+                audio.play();
+            });
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
